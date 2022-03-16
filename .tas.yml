@@ -3,6 +3,7 @@ framework: jest
 preRun:
   command:
     - yarn install
+    - yarn build
 preMerge:
   env:
      NODE_ENV: test
