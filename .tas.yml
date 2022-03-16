@@ -1,0 +1,19 @@
+---
+framework: jest
+preRun:
+  command:
+    - yarn install
+preMerge:
+  env:
+     NODE_ENV: test
+  pattern:
+    - "./test/index.spec.js"
+postMerge:
+  env:
+     NODE_ENV: test
+  pattern: 
+    - "./test/index.spec.js"
+postRun:
+     command:
+        - yarn --version
+version: 1.0
